@@ -1,11 +1,11 @@
 ## FindJar
 
-±êÇ©£¨¿Õ¸ñ·Ö¸ô£©£º Java
-##### Ô­ÎÄÁ´½Ó£º[FindJar](https://github.com/baininghan/findJar)
+æ ‡ç­¾ï¼ˆç©ºæ ¼åˆ†éš”ï¼‰ï¼š Java
+##### åŸæ–‡é“¾æ¥ï¼š[FindJar](https://github.com/baininghan/findJar)
 ---
 
-´ËÀàÓÃÓÚ±éÀúÒ»¸öÎÄ¼şÄ¿Â¼ÏÂ¿ÉÄÜ´æÔÚµÄËùÓĞÑ¹Ëõ°ü(.jar)ÖĞÊÇ·ñ´æÔÚÖ¸¶¨µÄClassÎÄ¼ş¡£
-#### ²éÕÒÔÚ`D:\Java`Ä¿Â¼ÏÂµÄ`String.class`ËùÔÚµÄ`jar`°ü¡£
+æ­¤ç±»ç”¨äºéå†ä¸€ä¸ªæ–‡ä»¶ç›®å½•ä¸‹å¯èƒ½å­˜åœ¨çš„æ‰€æœ‰å‹ç¼©åŒ…(.jar)ä¸­æ˜¯å¦å­˜åœ¨æŒ‡å®šçš„Classæ–‡ä»¶ã€‚
+#### æŸ¥æ‰¾åœ¨`D:\Java`ç›®å½•ä¸‹çš„`String.class`æ‰€åœ¨çš„`jar`åŒ…ã€‚
 ```java
 String fileSrc = "D:\\Java";
 String className = "String";
@@ -17,8 +17,8 @@ for(File file : files){
 	                + ", from : " + file.toString());
 }
 ```
-#### ²éÕÒÖ¸¶¨ºó×ºÃûµÄÑ¹Ëõ°üÖĞÏëÒª²éÕÒµÄÖ¸¶¨ºó×ºÃûµÄÎÄ¼ş¡£ÀıÈçÏÂÃæµÄÊ¾Àı£¬²éÕÒ`D:\Java`Ä¿Â¼ÏÂºó×ºÃûÊÇ`.zip`µÄÑ¹Ëõ°üÖĞ´æÔÚµÄ`request.htmll`ÎÄ¼ş¡£
-```
+#### æŸ¥æ‰¾æŒ‡å®šåç¼€åçš„å‹ç¼©åŒ…ä¸­æƒ³è¦æŸ¥æ‰¾çš„æŒ‡å®šåç¼€åçš„æ–‡ä»¶ã€‚ä¾‹å¦‚ä¸‹é¢çš„ç¤ºä¾‹ï¼ŒæŸ¥æ‰¾`D:\Java`ç›®å½•ä¸‹åç¼€åæ˜¯`.zip`çš„å‹ç¼©åŒ…ä¸­å­˜åœ¨çš„`request.html`æ–‡ä»¶ã€‚
+```java
 String fileSrc = "D:\\Java";
 String className = "request";
 FindJar fj = new FindJar("zip", "html");
