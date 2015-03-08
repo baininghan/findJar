@@ -1,7 +1,7 @@
 ## FindJar
 
-标签（空格分隔）： Java
-##### 原文链接：[FindJar](https://github.com/baininghan/findJar)
+标签：Java
+原文链接：[FindJar](https://github.com/baininghan/findJar)
 ---
 
 此类用于遍历一个文件目录下可能存在的所有压缩包(.jar)中是否存在指定的Class文件。

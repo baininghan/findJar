@@ -21,7 +21,8 @@ public class FindJar {
 	private String sufName = "jar";
 	/** 查找目标文件的后缀名，默认查找 .class */
 	private String targetName = "class";
-	public List<File> jarList = new ArrayList<File>();
+	/** 存放查找到的文件 */
+	public List<Object[]> jarList = new ArrayList<Object[]>();
 	
 	public FindJar(){}
 	
@@ -43,7 +44,7 @@ public class FindJar {
 	 * @param className
 	 * @throws FileNotFoundException
 	 */
-	public void iteratorDir(String fileSrc, String className) throws FileNotFoundException{
+	public void iteratorDir(String fileSrc, String className) {
 		File fileDir = new File(fileSrc);
 		checkFileExists(fileDir);
 		
@@ -73,9 +74,10 @@ public class FindJar {
 	 * @param fileDir 完整的文件目录名称
 	 * @throws FileNotFoundException 所给的文件目录没有找到
 	 */
-	private void checkFileExists(File fileDir) throws FileNotFoundException{
+	private void checkFileExists(File fileDir) {
 		if(!fileDir.exists()){
-			throw new FileNotFoundException();
+			//throw new FileNotFoundException();
+			System.out.println("The file path error, please give the correct path to the file!");
 		}
 	}
 	/**
@@ -93,7 +95,8 @@ public class FindJar {
 				if(!zeName.contains("." + targetName))continue;
 				String zeClassName = zeName.substring(zeName.lastIndexOf("/") + 1, zeName.lastIndexOf("." + targetName));
 				if(zeClassName.equalsIgnoreCase(className)){
-					jarList.add(file);
+					Object[] obj = new Object[]{file, zeName};
+					jarList.add(obj);
 				}
 			}
 			zf.close();
