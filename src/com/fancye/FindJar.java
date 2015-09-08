@@ -44,7 +44,7 @@ public class FindJar {
 	 * @param className
 	 * @throws FileNotFoundException
 	 */
-	public void iteratorDir(String fileSrc, String className) {
+	public void iteratorDir(String fileSrc, String className) throws FileNotFoundException {
 		File fileDir = new File(fileSrc);
 		checkFileExists(fileDir);
 		
@@ -74,10 +74,9 @@ public class FindJar {
 	 * @param fileDir 完整的文件目录名称
 	 * @throws FileNotFoundException 所给的文件目录没有找到
 	 */
-	private void checkFileExists(File fileDir) {
+	private void checkFileExists(File fileDir) throws FileNotFoundException {
 		if(!fileDir.exists()){
-			//throw new FileNotFoundException();
-			System.out.println("The file path error, please give the correct path to the file!");
+			throw new FileNotFoundException();
 		}
 	}
 	/**

@@ -1,6 +1,7 @@
 package com.fancye;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
 
 /**
@@ -19,7 +20,11 @@ public class Demo {
 //		String className = "register";
 //		FindJar fj = new FindJar("zip", "html");
 		
-		fj.iteratorDir(fileSrc, className);
+		try {
+			fj.iteratorDir(fileSrc, className);
+		} catch (FileNotFoundException e) {
+			System.out.println("The file path error, please give the correct path to the file!");
+		}
 		List<Object[]> files = fj.jarList;
 		if(files.isEmpty()){System.out.println("Not found!");}
 		for(Object[] obj : files){
