@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
-public class Demo2 {
+public class FindStart {
 	public static void main(String[] args) {
 		String fileSrc = "D:\\Java";
 		String className = "String";
@@ -69,5 +69,6 @@ public class Demo2 {
 			System.out.println("Done ...");
 		}
 		s.close();
+		System.exit(0);
 	}
 }
